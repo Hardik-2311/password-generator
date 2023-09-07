@@ -15,7 +15,7 @@ const symbols = '~`!@#$%^&*()_-+={[}]|:;"<,>.?/';
 
 let password = "";
 let passlength = 15;
-let checkCount = 1;
+let checkCount = 0;
 
 // first display of password strength will be grey
 handleslider();
