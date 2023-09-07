@@ -14,7 +14,7 @@ const allCheckBox = document.querySelectorAll("input[type=checkbox]");
 const symbols = '~`!@#$%^&*()_-+={[}]|:;"<,>.?/';
 
 let password = "";
-let passlength = 15;
+let passlength = 10;
 let checkCount = 0;
 
 // first display of password strength will be grey
@@ -24,6 +24,9 @@ setIndicator("#ccc");
 function handleslider() {
   slider.value = passlength;
   length.innerText = passlength;
+  const min = slider.min;
+  const max = slider.max;
+  slider.style.backgroundSize = ( (passlength - min)*100/(max - min)) + "% 100%"
 }
 
 function setIndicator(color) {
