@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <title>PassWord generator</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Password</h1>
+      <div class="display-wrapper">
+        <input
+          readonly
+          type="text"
+          placeholder="Password"
+          class="display"
+          data-password
+        />
+        <button class="btn">
+          <span data-copyimg></span>
+          <img src="./assets/copy.svg" width="23" height="23" alt="copy" data-copy />
+        </button>
+      </div>
+
+      <div class="input-wrapper">
+        <!-- password shower -->
+        <div class="password-leng">
+          <p>Password Length</p>
+          <p data-passlength>0</p>
+        </div>
+
+        <!-- slider -->
+        <input
+          type="range"
+          min="1"
+          max="20"
+          class="slider"
+          step="1"
+          data-slider
+        />
+        <!-- checkboxes -->
+        <div>
+          <input type="checkbox" id="uppercase" />
+          <label for="uppercase">Include uppercase letters</label>
+        </div>
+        <div>
+          <input type="checkbox" id="lowercase" />
+          <label for="lowercase">Include lowercase letters</label>
+        </div>
+        <div>
+          <input type="checkbox" id="symbols" />
+          <label for="symbols">Include symbols</label>
+        </div>
+        <div>
+          <input type="checkbox" id="numbers" />
+          <label for="numbers">Include numbers</label>
+        </div>
+
+        <!-- strength -->
+
+        <div class="strength-wrapper">
+          <p>Strength</p>
+          <div data-indicator>5</div>
+        </div>
+
+        <!-- generate password -->
+        <button class="generate-btn">Generate Password</button>
+      </div>
+    </div>
+    <script src="index.js "></script>
+  </body>
+</html>
