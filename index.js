@@ -112,3 +112,9 @@ slider.addEventListener('input', (e) => {
     passlength = e.target.value;
     handleslider();
 })
+
+copyBtn.addEventListener('click',()=>{
+    if(passwordDisplay.value){
+        copyContent();
+    }
+})
